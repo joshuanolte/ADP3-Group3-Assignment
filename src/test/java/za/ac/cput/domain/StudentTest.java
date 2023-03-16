@@ -40,8 +40,16 @@ class StudentTest {
         TimeUnit.SECONDS.sleep(1);
     }
 
+    @Test
+    public void testFail() {
+        fail("This test fails intentionally");
+    }
 
+    @Test
+    @Disabled
+    public void testDisabled() {
+        Student s2 = new Student();
 
-
-
+        assertNotNull(s2);
+    }
 }
